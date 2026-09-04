@@ -28,9 +28,7 @@ def run_recovery_workflow():
         if transaction["status"] == "success":
             continue
 
-        decision = generate_recovery_decision(
-            transaction
-        )
+        decision = generate_recovery_decision(transaction)
 
         policy_decision = decision["policy"]["decision"]
         action = decision["ai"]["recommended_action"]
@@ -49,7 +47,10 @@ def run_recovery_workflow():
 
             approved_actions += 1
 
-            # Duplicate protection
+            # -----------------------------------------
+            # IDEMPOTENCY / DUPLICATE PROTECTION
+            # -----------------------------------------
+
             if action_already_processed(
                 transaction["payment_id"],
                 action
@@ -65,24 +66,50 @@ def run_recovery_workflow():
 
             else:
 
+                # -----------------------------------------
+                # EXECUTE RECOVERY ACTION
+                # -----------------------------------------
+
                 execution_result = execute_recovery(
                     transaction,
                     action
                 )
 
-                executed_actions += 1
+                execution_status = execution_result["status"]
 
-                mark_action_processed(
-                    transaction["payment_id"],
-                    action
-                )
+                # -----------------------------------------
+                # SUCCESSFUL EXECUTION
+                # -----------------------------------------
 
-                recovered_revenue += execution_result[
-                    "recovered_amount"
-                ]
+                if execution_status in [
+                    "ACTION_EXECUTED",
+                    "RECOVERED"
+                ]:
 
-                if execution_result["status"] == "FAILED":
+                    executed_actions += 1
+
+                    # Mark only successfully executed
+                    # actions as processed.
+                    mark_action_processed(
+                        transaction["payment_id"],
+                        action
+                    )
+
+                    recovered_revenue += execution_result[
+                        "recovered_amount"
+                    ]
+
+                # -----------------------------------------
+                # FAILED EXECUTION
+                # -----------------------------------------
+
+                elif execution_status == "FAILED":
+
                     failed_recoveries += 1
+
+                    # IMPORTANT:
+                    # Do NOT mark failed actions as processed.
+                    # A future run can safely retry them.
 
         # -----------------------------------------
         # HUMAN REVIEW
@@ -100,12 +127,19 @@ def run_recovery_workflow():
 
             blocked_actions += 1
 
+        # -----------------------------------------
+        # RESULT
+        # -----------------------------------------
+
         result = {
             **decision,
             "execution": execution_result
         }
 
-        # Audit everything
+        # -----------------------------------------
+        # AUDIT TRAIL
+        # -----------------------------------------
+
         write_audit_log({
             "payment_id": transaction["payment_id"],
             "amount": transaction["amount"],
