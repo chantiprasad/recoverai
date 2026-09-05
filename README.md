@@ -1,7 +1,3 @@
-Absolutely. Copy **everything inside the block below** and paste it directly into `D:\D-DESKTOP\recoverai\README.md`.
-
-I’ve cleaned the Markdown so there are **no unwanted `\` characters** and the headings/code blocks will render correctly on GitHub and VS Code.
-
 ````markdown
 # RecoverAI — AI Revenue Recovery Agent
 
@@ -53,45 +49,47 @@ The AI never directly controls money movement.
                                ▼
                     ┌─────────────────────┐
                     │     Risk Engine     │
-                    │  Revenue-at-Risk    │
-                    │ Risk Classification │
+                    │   Revenue-at-Risk   │
+                    │  Risk Classification│
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │     AI Decision     │
-                    │ Diagnosis + Action  │
+                    │  Diagnosis + Action │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │    Policy Engine    │
-                    │ Limits + Guardrails │
+                    │  Limits + Guardrails│
                     └──────────┬──────────┘
                                │
-                  ┌────────────┴────────────┐
-                  │                         │
-                  ▼                         ▼
-        ┌──────────────────┐      ┌──────────────────┐
-        │     Executor     │      │   Human Review   │
-        │ Retry / Reminder │      │ High-risk cases  │
-        │ Alternative Pay  │      │                  │
-        │ Card Update      │      │                  │
-        └────────┬─────────┘      └──────────────────┘
-                 │
-                 ▼
-        ┌──────────────────────┐
-        │ Audit + Idempotency  │
-        │ Execution History    │
-        └──────────┬───────────┘
-                   │
-                   ▼
-        ┌──────────────────────┐
-        │   Metrics Dashboard  │
-        │ Revenue Recovered    │
-        │ Recovery Rate        │
-        │ Automation Rate      │
-        └──────────────────────┘
+                     ┌─────────┴─────────┐
+                     │                   │
+                     ▼                   ▼
+              ┌──────────────┐    ┌──────────────┐
+              │   Executor   │    │ Human Review │
+              │              │    │ High-risk    │
+              │ Retry        │    │ cases        │
+              │ Reminder     │    └──────────────┘
+              │ Alternative  │
+              │ Card Update  │
+              └──────┬───────┘
+                     │
+                     ▼
+              ┌──────────────────────┐
+              │ Audit + Idempotency  │
+              │ Execution History    │
+              └──────────┬───────────┘
+                         │
+                         ▼
+              ┌──────────────────────┐
+              │   Metrics Dashboard  │
+              │ Revenue Recovered    │
+              │ Recovery Rate        │
+              │ Automation Rate      │
+              └──────────────────────┘
 ````
 
 ---
@@ -130,7 +128,7 @@ RecoverAI uses deterministic controls around AI decisions.
 | ------------------------- | -----------: |
 | Maximum automated retries |            2 |
 | Maximum automated amount  |      ₹50,000 |
-| Maximum reminders         |            2 |
+| Configured reminder limit |            2 |
 | High-risk escalation      | Human review |
 | Duplicate actions         |      Blocked |
 
@@ -180,23 +178,47 @@ RecoverAI treats uncertain execution states carefully and uses idempotency to pr
 
 A sample recovery run processes **120 recovery candidates**.
 
-| Metric                      |     Result |
-| --------------------------- | ---------: |
-| Payments analyzed           |        120 |
-| Revenue at risk             | ₹31,96,779 |
-| Revenue recovered           |  ₹8,26,946 |
-| Recovery rate               |     25.87% |
-| Automation rate             |     70.83% |
-| Human reviews               |         35 |
-| Recovered transactions      |         36 |
-| Executed actions            |         49 |
-| Failed recoveries           |          0 |
-| Duplicate actions prevented |          0 |
+| Metric                               |     Result |
+| ------------------------------------ | ---------: |
+| Payments analyzed                    |        120 |
+| Revenue at risk                      | ₹31,96,779 |
+| Revenue recovered                    |  ₹8,26,946 |
+| Recovery rate                        |     25.87% |
+| Automation rate                      |     70.83% |
+| Automated executions                 |         85 |
+| Human reviews                        |         35 |
+| Recovered transactions               |         36 |
+| Additional recovery actions executed |         49 |
+| Failed recoveries                    |          0 |
+| Duplicate actions prevented          |          0 |
+
+### Latest Demo Run
+
+```text
+Run ID: run_20260905113536992550
+
+Transactions processed: 120
+Approved actions: 85
+Executed actions: 85
+Human reviews: 35
+
+Revenue at risk: ₹31,96,779
+Revenue recovered: ₹8,26,946
+
+Recovery rate: 25.87%
+Automation rate: 70.83%
+
+Failed recoveries: 0
+Duplicate actions prevented: 0
+```
+
+This run demonstrates the complete RecoverAI workflow from risk detection through policy validation, controlled execution, audit logging, and revenue measurement.
 
 ### Recovery Impact
 
 ```text
 Revenue at Risk
+
 ₹31,96,779
      │
      ├── Recovered
@@ -218,7 +240,9 @@ Revenue at Risk
 
 ```text
                  Recovered Revenue
+
 Recovery Rate = ─────────────────── × 100
+
                   Revenue at Risk
 ```
 
@@ -226,25 +250,33 @@ Current demo:
 
 ```text
 ₹8,26,946
+
 ────────── × 100 = 25.87%
+
 ₹31,96,779
 ```
 
 ### Automation Rate
 
 ```text
-                  Automated Actions Executed
+                 Automated Actions Executed
+
 Automation Rate = ─────────────────────────── × 100
-                   Recovery Candidates Processed
+
+                  Recovery Candidates Processed
 ```
 
 Current demo:
 
 ```text
-49
-─── × 100 = 70.83%
-69
+85
+
+──── × 100 = 70.83%
+
+120
 ```
+
+The automation rate measures the percentage of recovery candidates for which RecoverAI successfully executed an approved automated recovery action.
 
 ---
 
@@ -293,27 +325,27 @@ RecoverAI intentionally does **not** allow the AI model to directly execute fina
 Instead:
 
 ```text
-                 ┌─────────────────┐
-                 │       AI        │
-                 │                 │
-                 │ Diagnose        │
-                 │ Recommend       │
-                 │ Explain         │
-                 └────────┬────────┘
-                          │
-                          ▼
-                 ┌─────────────────┐
-                 │ Policy Engine   │
-                 │                 │
-                 │ Limits          │
-                 │ Guardrails      │
-                 │ Risk Controls   │
-                 └────────┬────────┘
-                          │
-                    ┌─────┴─────┐
-                    │           │
-                    ▼           ▼
-                 Execute     Human Review
+                  ┌─────────────────┐
+                  │       AI        │
+                  │                 │
+                  │ Diagnose        │
+                  │ Recommend       │
+                  │ Explain         │
+                  └────────┬────────┘
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  Policy Engine  │
+                  │                 │
+                  │ Limits          │
+                  │ Guardrails      │
+                  │ Risk Controls   │
+                  └────────┬────────┘
+                           │
+                      ┌────┴────┐
+                      │         │
+                      ▼         ▼
+                   Execute   Human Review
 ```
 
 This makes the system safer and easier to audit.
@@ -347,6 +379,7 @@ This makes the system safer and easier to audit.
 * JSON audit logs
 * JSON run state
 * Idempotency store
+* Workflow history
 
 ### Development Tools
 
@@ -388,6 +421,7 @@ recoverai/
 │   ├── transactions.csv
 │   ├── audit_log.json
 │   ├── latest_run.json
+│   ├── run_history.json
 │   └── processed_actions.json
 │
 ├── README.md
@@ -401,7 +435,7 @@ recoverai/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/chantiprasad/recoverai.git
 cd recoverai
 ```
 
@@ -411,7 +445,12 @@ Open a terminal:
 
 ```powershell
 cd backend
+
+python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 ```
 
@@ -427,6 +466,7 @@ Open another terminal:
 
 ```powershell
 cd frontend
+npm install
 npm run dev
 ```
 
@@ -444,7 +484,7 @@ Example:
 GEMINI_API_KEY=your_api_key_here
 ```
 
-Do not commit your actual API key to GitHub.
+ 
 
 ---
 
@@ -457,7 +497,7 @@ Open Dashboard
       ↓
 Show Revenue at Risk
       ↓
-Click "Run Recovery"
+Run Recovery Workflow
       ↓
 Analyze Transactions
       ↓
@@ -482,16 +522,15 @@ Revenue Recovered Displayed
 
 1. Open the RecoverAI dashboard.
 2. Show the current revenue-at-risk amount.
-3. Click **Run Recovery**.
-4. RecoverAI analyzes the recovery candidates.
-5. AI diagnoses the payment failures.
-6. AI recommends recovery actions.
-7. Policy engine validates each recommendation.
-8. Approved actions are executed.
-9. Unsafe cases are escalated to human review.
-10. Dashboard displays recovered revenue and recovery metrics.
-11. Open Recovery Decisions to show individual actions.
-12. Open Audit Trail to show the complete decision history.
+3. Run the recovery workflow once.
+4. Show the recovery result and business metrics.
+5. Open **Recovery Insights** to show failure patterns and recommended actions.
+6. Open **Recovery Decisions** to show individual AI decisions and execution results.
+7. Open **Audit Trail** to demonstrate traceability.
+8. Open **Workflow History** to show the preserved workflow execution.
+9. Open **Safety & Controls** to demonstrate policy limits and idempotency protection.
+
+> For the submitted demo dataset, the workflow should be executed once to establish the baseline run. Subsequent executions are protected by idempotency and may show duplicate actions being prevented.
 
 ---
 
@@ -565,11 +604,17 @@ The architecture intentionally separates:
 
 ```text
 Intelligence
+
      +
+
 Safety
+
      +
+
 Execution
+
      +
+
 Measurement
 ```
 
@@ -586,11 +631,11 @@ The primary business metric is:
 For the current demo dataset:
 
 ```text
-Revenue at Risk       ₹31,96,779
+Revenue at Risk        ₹31,96,779
 
-Revenue Recovered      ₹8,26,946
+Revenue Recovered       ₹8,26,946
 
-Remaining Risk        ₹23,69,833
+Remaining Risk         ₹23,69,833
 
 Recovery Rate              25.87%
 ```
@@ -741,11 +786,3 @@ The system continuously answers three important questions:
 3. **How much revenue did we actually recover?**
 
 ---
-
-## 👨‍💻 Built With
-
-**RecoverAI — AI Revenue Recovery Agent**
-
-Built as an AI-powered revenue recovery system focused on safe automation, measurable recovery, policy enforcement, and auditability.
-
- 

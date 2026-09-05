@@ -1,0 +1,2676 @@
+{
+  "runs": [
+    {
+      "run_id": "run_20260905123751561165",
+      "timestamp": "2026-09-05T12:37:51.561218+00:00",
+      "metrics": {
+        "transactions_processed": 120,
+        "revenue_at_risk": 3196779.0,
+        "recovered_revenue": 826946.0,
+        "recovery_rate_percent": 25.87,
+        "automation_rate_percent": 70.83,
+        "human_reviews": 35,
+        "blocked_actions": 0,
+        "failed_recoveries": 0,
+        "duplicate_actions_prevented": 0,
+        "best_recovery": 826946.0
+      },
+      "workflow": {
+        "transactions_processed": 120,
+        "approved_actions": 85,
+        "executed_actions": 85,
+        "human_reviews": 35,
+        "blocked_actions": 0,
+        "failed_recoveries": 0,
+        "duplicate_actions_prevented": 0,
+        "recovered_revenue": 826946.0,
+        "results": [
+          {
+            "payment_id": "pay_100001",
+            "customer_id": "cust_1044",
+            "amount": 15128.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100003",
+            "customer_id": "cust_1036",
+            "amount": 33618.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100004",
+            "customer_id": "cust_1015",
+            "amount": 43090.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100006",
+            "customer_id": "cust_1007",
+            "amount": 18710.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100007",
+            "customer_id": "cust_1017",
+            "amount": 6838.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100008",
+            "customer_id": "cust_1025",
+            "amount": 30608.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100009",
+            "customer_id": "cust_1037",
+            "amount": 19713.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100012",
+            "customer_id": "cust_1014",
+            "amount": 24409.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100014",
+            "customer_id": "cust_1025",
+            "amount": 48284.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100015",
+            "customer_id": "cust_1044",
+            "amount": 45599.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 45599.0
+            }
+          },
+          {
+            "payment_id": "pay_100017",
+            "customer_id": "cust_1014",
+            "amount": 14326.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 14326.0
+            }
+          },
+          {
+            "payment_id": "pay_100018",
+            "customer_id": "cust_1009",
+            "amount": 42629.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100019",
+            "customer_id": "cust_1048",
+            "amount": 37289.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100020",
+            "customer_id": "cust_1033",
+            "amount": 26675.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100022",
+            "customer_id": "cust_1025",
+            "amount": 28166.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100023",
+            "customer_id": "cust_1036",
+            "amount": 31174.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100026",
+            "customer_id": "cust_1033",
+            "amount": 712.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100027",
+            "customer_id": "cust_1013",
+            "amount": 20058.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 20058.0
+            }
+          },
+          {
+            "payment_id": "pay_100028",
+            "customer_id": "cust_1001",
+            "amount": 11087.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 11087.0
+            }
+          },
+          {
+            "payment_id": "pay_100030",
+            "customer_id": "cust_1006",
+            "amount": 16285.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 16285.0
+            }
+          },
+          {
+            "payment_id": "pay_100031",
+            "customer_id": "cust_1036",
+            "amount": 35411.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100032",
+            "customer_id": "cust_1014",
+            "amount": 35081.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100033",
+            "customer_id": "cust_1024",
+            "amount": 20928.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100035",
+            "customer_id": "cust_1015",
+            "amount": 1878.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 1878.0
+            }
+          },
+          {
+            "payment_id": "pay_100037",
+            "customer_id": "cust_1018",
+            "amount": 5143.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 5143.0
+            }
+          },
+          {
+            "payment_id": "pay_100038",
+            "customer_id": "cust_1037",
+            "amount": 35839.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100039",
+            "customer_id": "cust_1007",
+            "amount": 31496.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100040",
+            "customer_id": "cust_1044",
+            "amount": 28259.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100041",
+            "customer_id": "cust_1013",
+            "amount": 26886.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100042",
+            "customer_id": "cust_1018",
+            "amount": 29900.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100043",
+            "customer_id": "cust_1004",
+            "amount": 5440.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100044",
+            "customer_id": "cust_1032",
+            "amount": 49885.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100046",
+            "customer_id": "cust_1045",
+            "amount": 17880.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 17880.0
+            }
+          },
+          {
+            "payment_id": "pay_100047",
+            "customer_id": "cust_1038",
+            "amount": 12945.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100049",
+            "customer_id": "cust_1006",
+            "amount": 35307.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100051",
+            "customer_id": "cust_1003",
+            "amount": 16635.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 16635.0
+            }
+          },
+          {
+            "payment_id": "pay_100052",
+            "customer_id": "cust_1034",
+            "amount": 43581.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 43581.0
+            }
+          },
+          {
+            "payment_id": "pay_100053",
+            "customer_id": "cust_1026",
+            "amount": 13886.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100054",
+            "customer_id": "cust_1049",
+            "amount": 42803.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100055",
+            "customer_id": "cust_1007",
+            "amount": 30534.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100056",
+            "customer_id": "cust_1009",
+            "amount": 14469.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 14469.0
+            }
+          },
+          {
+            "payment_id": "pay_100057",
+            "customer_id": "cust_1029",
+            "amount": 16509.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100058",
+            "customer_id": "cust_1043",
+            "amount": 43358.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100059",
+            "customer_id": "cust_1007",
+            "amount": 7288.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 7288.0
+            }
+          },
+          {
+            "payment_id": "pay_100060",
+            "customer_id": "cust_1046",
+            "amount": 18965.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 18965.0
+            }
+          },
+          {
+            "payment_id": "pay_100061",
+            "customer_id": "cust_1017",
+            "amount": 45555.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100062",
+            "customer_id": "cust_1001",
+            "amount": 42068.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 42068.0
+            }
+          },
+          {
+            "payment_id": "pay_100063",
+            "customer_id": "cust_1036",
+            "amount": 42253.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100065",
+            "customer_id": "cust_1010",
+            "amount": 2861.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100066",
+            "customer_id": "cust_1023",
+            "amount": 3241.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100068",
+            "customer_id": "cust_1012",
+            "amount": 49617.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100069",
+            "customer_id": "cust_1018",
+            "amount": 12254.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100070",
+            "customer_id": "cust_1015",
+            "amount": 7584.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100071",
+            "customer_id": "cust_1002",
+            "amount": 23415.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100072",
+            "customer_id": "cust_1023",
+            "amount": 22012.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100073",
+            "customer_id": "cust_1017",
+            "amount": 35641.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100075",
+            "customer_id": "cust_1033",
+            "amount": 48245.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100076",
+            "customer_id": "cust_1046",
+            "amount": 38287.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 38287.0
+            }
+          },
+          {
+            "payment_id": "pay_100077",
+            "customer_id": "cust_1024",
+            "amount": 34573.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 34573.0
+            }
+          },
+          {
+            "payment_id": "pay_100078",
+            "customer_id": "cust_1043",
+            "amount": 44031.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100079",
+            "customer_id": "cust_1043",
+            "amount": 20181.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 20181.0
+            }
+          },
+          {
+            "payment_id": "pay_100080",
+            "customer_id": "cust_1013",
+            "amount": 26871.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100081",
+            "customer_id": "cust_1020",
+            "amount": 25347.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100082",
+            "customer_id": "cust_1028",
+            "amount": 526.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 526.0
+            }
+          },
+          {
+            "payment_id": "pay_100083",
+            "customer_id": "cust_1033",
+            "amount": 29452.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100085",
+            "customer_id": "cust_1015",
+            "amount": 49726.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100087",
+            "customer_id": "cust_1046",
+            "amount": 27660.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 27660.0
+            }
+          },
+          {
+            "payment_id": "pay_100088",
+            "customer_id": "cust_1045",
+            "amount": 26691.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100089",
+            "customer_id": "cust_1030",
+            "amount": 28362.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100091",
+            "customer_id": "cust_1021",
+            "amount": 35308.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100092",
+            "customer_id": "cust_1036",
+            "amount": 47638.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 47638.0
+            }
+          },
+          {
+            "payment_id": "pay_100093",
+            "customer_id": "cust_1049",
+            "amount": 49236.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100094",
+            "customer_id": "cust_1041",
+            "amount": 18673.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 18673.0
+            }
+          },
+          {
+            "payment_id": "pay_100096",
+            "customer_id": "cust_1009",
+            "amount": 21452.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 21452.0
+            }
+          },
+          {
+            "payment_id": "pay_100097",
+            "customer_id": "cust_1005",
+            "amount": 25602.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100098",
+            "customer_id": "cust_1027",
+            "amount": 22184.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 22184.0
+            }
+          },
+          {
+            "payment_id": "pay_100099",
+            "customer_id": "cust_1049",
+            "amount": 28034.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100100",
+            "customer_id": "cust_1027",
+            "amount": 886.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 886.0
+            }
+          },
+          {
+            "payment_id": "pay_100101",
+            "customer_id": "cust_1002",
+            "amount": 14880.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100102",
+            "customer_id": "cust_1030",
+            "amount": 44335.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100104",
+            "customer_id": "cust_1012",
+            "amount": 42623.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100105",
+            "customer_id": "cust_1021",
+            "amount": 25344.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100106",
+            "customer_id": "cust_1031",
+            "amount": 18735.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100109",
+            "customer_id": "cust_1043",
+            "amount": 10486.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100110",
+            "customer_id": "cust_1050",
+            "amount": 14784.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100111",
+            "customer_id": "cust_1050",
+            "amount": 40207.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 40207.0
+            }
+          },
+          {
+            "payment_id": "pay_100112",
+            "customer_id": "cust_1020",
+            "amount": 7584.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 7584.0
+            }
+          },
+          {
+            "payment_id": "pay_100113",
+            "customer_id": "cust_1045",
+            "amount": 47359.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100114",
+            "customer_id": "cust_1008",
+            "amount": 46191.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100115",
+            "customer_id": "cust_1005",
+            "amount": 35413.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100116",
+            "customer_id": "cust_1024",
+            "amount": 28028.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100117",
+            "customer_id": "cust_1042",
+            "amount": 10526.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100118",
+            "customer_id": "cust_1047",
+            "amount": 35769.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100120",
+            "customer_id": "cust_1022",
+            "amount": 37845.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 37845.0
+            }
+          },
+          {
+            "payment_id": "pay_100121",
+            "customer_id": "cust_1023",
+            "amount": 21800.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100122",
+            "customer_id": "cust_1036",
+            "amount": 18827.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100124",
+            "customer_id": "cust_1042",
+            "amount": 36884.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100126",
+            "customer_id": "cust_1024",
+            "amount": 16445.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100127",
+            "customer_id": "cust_1022",
+            "amount": 35294.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100128",
+            "customer_id": "cust_1015",
+            "amount": 30236.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100129",
+            "customer_id": "cust_1049",
+            "amount": 13121.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100130",
+            "customer_id": "cust_1049",
+            "amount": 14680.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 14680.0
+            }
+          },
+          {
+            "payment_id": "pay_100131",
+            "customer_id": "cust_1012",
+            "amount": 13221.0,
+            "status": "failed",
+            "failure_reason": "bank_declined",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Payment declined by issuing bank",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.89
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100132",
+            "customer_id": "cust_1018",
+            "amount": 46900.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 46900.0
+            }
+          },
+          {
+            "payment_id": "pay_100133",
+            "customer_id": "cust_1041",
+            "amount": 36764.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100134",
+            "customer_id": "cust_1031",
+            "amount": 1303.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 1303.0
+            }
+          },
+          {
+            "payment_id": "pay_100135",
+            "customer_id": "cust_1031",
+            "amount": 22828.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100136",
+            "customer_id": "cust_1041",
+            "amount": 26760.0,
+            "status": "failed",
+            "failure_reason": "insufficient_funds",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Customer account may not have sufficient funds",
+              "recommended_action": "SEND_PAYMENT_REMINDER",
+              "confidence": 0.91
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Reminder allowed by recovery policy"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Payment reminder scheduled",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100137",
+            "customer_id": "cust_1006",
+            "amount": 10277.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 10277.0
+            }
+          },
+          {
+            "payment_id": "pay_100138",
+            "customer_id": "cust_1040",
+            "amount": 37073.0,
+            "status": "failed",
+            "failure_reason": "limit_exceeded",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Payment exceeded the available transaction limit",
+              "recommended_action": "REQUEST_ALTERNATIVE_PAYMENT",
+              "confidence": 0.9
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Alternative payment request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Alternative payment request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100139",
+            "customer_id": "cust_1038",
+            "amount": 25428.0,
+            "status": "failed",
+            "failure_reason": "card_expired",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Customer card has expired",
+              "recommended_action": "REQUEST_CARD_UPDATE",
+              "confidence": 0.97
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Card update request allowed"
+            },
+            "execution": {
+              "status": "ACTION_EXECUTED",
+              "message": "Card update request sent",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100140",
+            "customer_id": "cust_1040",
+            "amount": 37765.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 37765.0
+            }
+          },
+          {
+            "payment_id": "pay_100141",
+            "customer_id": "cust_1011",
+            "amount": 41493.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 41493.0
+            }
+          },
+          {
+            "payment_id": "pay_100143",
+            "customer_id": "cust_1019",
+            "amount": 45678.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 45678.0
+            }
+          },
+          {
+            "payment_id": "pay_100144",
+            "customer_id": "cust_1005",
+            "amount": 19381.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100145",
+            "customer_id": "cust_1028",
+            "amount": 41463.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100146",
+            "customer_id": "cust_1005",
+            "amount": 15233.0,
+            "status": "failed",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 15233.0
+            }
+          },
+          {
+            "payment_id": "pay_100147",
+            "customer_id": "cust_1019",
+            "amount": 20659.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 0,
+            "ai": {
+              "diagnosis": "Temporary payment network failure",
+              "recommended_action": "RETRY_PAYMENT",
+              "confidence": 0.92
+            },
+            "policy": {
+              "decision": "APPROVE",
+              "reason": "Retry is within recovery policy"
+            },
+            "execution": {
+              "status": "RECOVERED",
+              "message": "Payment retry succeeded",
+              "recovered_amount": 20659.0
+            }
+          },
+          {
+            "payment_id": "pay_100148",
+            "customer_id": "cust_1018",
+            "amount": 31216.0,
+            "status": "failed",
+            "failure_reason": "unknown",
+            "retry_count": 1,
+            "ai": {
+              "diagnosis": "Unknown payment failure requiring investigation",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.6
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          },
+          {
+            "payment_id": "pay_100149",
+            "customer_id": "cust_1028",
+            "amount": 5771.0,
+            "status": "pending",
+            "failure_reason": "network_timeout",
+            "retry_count": 2,
+            "ai": {
+              "diagnosis": "Repeated network failure",
+              "recommended_action": "HUMAN_REVIEW",
+              "confidence": 0.88
+            },
+            "policy": {
+              "decision": "HUMAN_REVIEW",
+              "reason": "AI could not safely determine an automated recovery action"
+            },
+            "execution": {
+              "status": "NOT_EXECUTED",
+              "message": "Action not approved",
+              "recovered_amount": 0
+            }
+          }
+        ]
+      },
+      "latest_execution": {
+        "revenue_recovered": 826946.0,
+        "duplicate_actions_prevented": 0
+      }
+    }
+  ]
+}

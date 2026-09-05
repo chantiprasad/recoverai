@@ -1,9 +1,15 @@
+from datetime import datetime, timezone
+
 from fastapi import APIRouter
 
 from app.services.workflow import run_recovery_workflow
 from app.services.risk_engine import get_risk_summary
 from app.services.metrics import calculate_metrics
-from app.services.run_store import save_latest_run, get_latest_run
+from app.services.run_store import (
+    save_latest_run,
+    get_latest_run,
+    save_run_history,
+)
 
 
 router = APIRouter(
@@ -31,16 +37,18 @@ def run_workflow():
     if previous_run:
         previous_metrics = previous_run.get("metrics")
 
+    # IMPORTANT:
+    # The correct metric key is recovered_revenue.
     previous_recovered = 0
 
     if previous_metrics:
         previous_recovered = previous_metrics.get(
-            "revenue_recovered",
+            "recovered_revenue",
             0
         )
 
     current_recovered = metrics.get(
-        "revenue_recovered",
+        "recovered_revenue",
         0
     )
 
@@ -52,8 +60,20 @@ def run_workflow():
 
     metrics["best_recovery"] = best_recovery
 
-    # Keep both the latest execution and the best recovery result.
+    run_id = (
+        "run_"
+        + datetime.now(timezone.utc).strftime(
+            "%Y%m%d%H%M%S%f"
+        )
+    )
+
+    timestamp = datetime.now(
+        timezone.utc
+    ).isoformat()
+
     latest_run = {
+        "run_id": run_id,
+        "timestamp": timestamp,
         "metrics": metrics,
         "workflow": workflow_result,
         "latest_execution": {
@@ -67,8 +87,22 @@ def run_workflow():
 
     save_latest_run(latest_run)
 
+    save_run_history(latest_run)
+
     return {
         "status": "COMPLETED",
+        "run_id": run_id,
+        "timestamp": timestamp,
         "metrics": metrics,
         "workflow": workflow_result
+    }
+
+
+@router.get("/history")
+def workflow_history():
+
+    from app.services.run_store import get_run_history
+
+    return {
+        "runs": get_run_history()
     }
